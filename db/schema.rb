@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507160518) do
+ActiveRecord::Schema.define(version: 20150507204938) do
 
   create_table "links", force: :cascade do |t|
     t.string   "url"
     t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "clicks",     default: 0
   end
 
 end

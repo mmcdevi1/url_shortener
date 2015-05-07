@@ -1,9 +1,17 @@
-%h1 Url Shortener
-= form_for @link do |f|
-	= f.label :url
-	= f.text_field :url
-	= f.submit
-- @links.each do |link|
-	%div
-		= link.url
-		= link_to request.original_url + link.slug.to_s, slug_path(link.slug)
+.widget
+	%h1 Url Shortener
+	%h4 Enter your URL to shorten
+	= form_for @link do |f|
+		.form-group
+			= f.text_field :url, class: "form-control", placeholder: 'Enter URL'
+		= f.submit "Submit", class: 'btn btn-info btn-block btn-lg'
+%table.table.table-bordered
+	%thead
+		%tr
+			%th Top 100 
+	%tbody
+		- @links.each_with_index do |link, index|
+			%tr
+				%td= index + 1
+				%td= link.url
+				%td= link_to request.original_url + link.slug.to_s, slug_path(link.slug)
