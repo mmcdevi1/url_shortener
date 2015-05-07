@@ -13,6 +13,7 @@ gem 'bootstrap_form'
 gem 'faker'
 gem 'fabrication'
 gem 'paperclip'
+gem 'turbolinks'
 
 group :development do
   gem 'thin'
