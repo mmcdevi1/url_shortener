@@ -4,6 +4,11 @@ class LinksController < ApplicationController
 		@links = Link.all
 	end
 
+	def show
+		@link = Link.find(params[:id])
+		redirect_to @link.url
+	end
+
 	def create
 		@link = Link.new(links_params)
 		if @link.save
