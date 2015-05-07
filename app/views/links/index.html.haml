@@ -6,4 +6,4 @@
 - @links.each do |link|
 	%div
 		= link.url
-		= link_to request.original_url + link.slug.to_s, link
+		= link_to request.original_url + link.slug.to_s, slug_path(link.slug)
