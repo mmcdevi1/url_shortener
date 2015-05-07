@@ -1,1 +1,9 @@
 %h1 Url Shortener
+= form_for @link do |f|
+	= f.label :url
+	= f.text_field :url
+	= f.submit
+- @links.each do |link|
+	%div
+		= link.url
+		= link.slug
