@@ -4,6 +4,7 @@ class Link < ActiveRecord::Base
 	scope :top_100_clicks, -> { order('clicks desc').limit(100) }
 
 	validates_presence_of :url
+	validates :url, :url => true
 
 	private
 

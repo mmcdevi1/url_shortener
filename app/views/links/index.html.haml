@@ -5,6 +5,10 @@
 		.form-group
 			= f.text_field :url, class: "form-control", placeholder: 'Enter URL'
 		= f.submit "Submit", class: 'btn btn-info btn-block btn-lg'
+.widget
+	%h4{style: "margin: 0 0 30px;"} Last URL created
+	= Link.last.url
+	= link_to request.original_url + Link.last.slug, slug_path(Link.last.slug)
 %table.table
 	%thead
 		%tr

@@ -13,6 +13,7 @@ gem 'faker'
 gem 'fabrication'
 gem 'paperclip'
 gem 'turbolinks'
+gem 'validate_url'
 
 group :development do
   gem 'thin'
