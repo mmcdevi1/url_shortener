@@ -5,14 +5,14 @@
   - How you came up with the short URL scheme
   - Future improvements you would make with more time
 
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
 # URL Shortener 
 
-
 ### Setup and Installation
+
+1. Git clone https://github.com/mmcdevi1/url_shortener.git
+2. cd into url_shortner directory
+3. run bundle install
+4. rake db:migrate
+5. rake db:seed to seed fake data (if necessary)
+
+Link to [Herokuapp](https://nameless-river-7527.herokuapp.com/)
